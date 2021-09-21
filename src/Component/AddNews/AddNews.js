@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 import { UserContext } from '../../App';
 import AdminBar from '../AdminBar/AdminBar';
 import AllNewsList from '../AllNewsList/AllNewsList';
@@ -59,7 +59,8 @@ const AddNews = () => {
                 </div>
                 <AllNewsList></AllNewsList>
             </div> :
-            <h3 className="text-danger text-center mt-5">You are not an Admin. Access permission denied.</h3>}
+                <h3 className="text-danger text-center mt-5">You are not an Admin. Access permission denied.</h3>
+            }
         </div>
     );
 };

@@ -13,7 +13,7 @@ const NewsDetail = () => {
     return (
         <Container className="my-5">
             <Row>
-                <Col>
+                <Col xs={12} md={6} lg={6}>
                     <h4>{newsDetails.title}</h4>
                     <p>{newsDetails.description}</p>
                     <div className="text-muted text-end">
@@ -21,7 +21,7 @@ const NewsDetail = () => {
                     </div>
                     
                 </Col>
-                <Col><img fluid src={newsDetails.image} alt="" /></Col>
+                <Col className="d-flex align-items-center justify-content-center" xs={12} md={6} lg={6}><img width="80%" src={newsDetails.image} alt="" /></Col>
             </Row>
         </Container>
     );
